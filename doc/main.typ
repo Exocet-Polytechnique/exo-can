@@ -2,6 +2,12 @@
 #set page("us-letter")
 #set text(lang: "fr")
 
+#let annex(body) = {
+  set heading(numbering: "A1.", supplement: [Annexe])
+  counter(heading).update(0)
+  body
+}
+
 #show link: underline
 
 #include("title.typ")
@@ -263,3 +269,157 @@ Au démarrage, le bateau sera dans un état spécial d’initialisation (_STARTI
 // % Erreurs:
 // % -Types d'erreurs: Temperature, Pression, Valeurs critiques
 // % -Donnees? (i.e.: Temp, pression élevée)
+
+#show: annex
+
+= Capteurs et données <annex:sensors>
+
+== Capteurs
+
+#table(columns: 3,
+  table.header([Capteur], [Données], [Format]),
+
+  [#link("https://www.analog.com/en/products/ds18b20.html")[DS18B20]], [Température (#sym.degree C)], [Fixed point: 12 bits (4 bits de décimales)],
+
+  [_Capteur de température ambiante_ (modèle à déterminer)], [Température (#sym.degree C)], [Fixed point: 20 bits (12 bits de décimales)#footnote[Basé sur la datasheet du #link("https://www.adafruit.com/product/5183")[DHT20], une option considérée pour ce capteur.]],
+
+  table.cell(rowspan: 3)[#link("https://www.analog.com/en/products/ltc2944.html")[LTC2944]],
+  [État de charge (%)], [`u8` (255 = 100%, 0 = 0%)],
+  [Courant (A)], [Fixed point: 16 bits (9 bits de décimales)],
+  [Tension (V)], [Fixed point: 16 bits (9 bits de décimales)],
+
+  table.cell(rowspan: 3)[#link("https://www.sparkfun.com/gps-module-gp1818mk-56-channel.html")[GP1818MK]#footnote[On regarde pour changer le modèle de GPS, mais il devrait nous permettre d'obtenir les mêmes données. On peut réduire la latitude/longitude à 24 bits au besoin (avec 7 bits de décimales chaque).]],
+  [Latitude (#sym.degree, minutes)#footnote[Voir datasheet pour les unités, c'est un peu étrange.]], [Fixed point: 32 bits (15 bits de décimales)],
+  [Longitude (#sym.degree, minutes)], [Fixed point: 32 bits (15 bits de décimales)],
+  [Vitesse (km/h)], [Fixed point: 16 bits (10 bits de décimales)],
+
+  table.cell([#link("https://www.bosch-sensortec.com/products/smart-sensor-systems/bno055", [BNO055])], rowspan: 2),
+  [Accélération (m/s#super[2])], [Pour chacun des trois axes:\ Fixed point: 16 bits (9 bits de décimales)],
+  [Orientation (#sym.degree)], [Pour chacun des trois axes (_heading_, _roll_, _pitch_):\ Fixed point: 16 bits (5 bits de décimales)],
+
+  table.cell([Protium 2500#footnote[Le modèle n'est plus disponible sur le site du manufacturier. Il faut donc se contenter des fichiers sur #link("https://polymtlca0.sharepoint.com/:f:/r/sites/Exocet/Shared%20Documents/General/2-%20Documents%20Actifs%20(2024-2025)/1-%20Embarqu%C3%A9%20+%20%C3%89lectrique/Datasheets/Electric%20System%20Components/Hydrogen%20Fuel%20Cell%20-%20Protium-2500?csf=1&web=1&e=TkVA5z")[Teams de l'équipe] pour l'instant. Il sera remplacé d'ici peu par un Google Drive.]], rowspan: 7),
+  [Puissance (W)], [Fixed point: 14 bits (4 bits de décimales)],
+  [Tension (V)], [Fixed point: 14 bits (7 bits de décimales)],
+  [Courant (A)], [Fixed point: 14 bits (7 bits de décimales)],
+  [Énergie (Wh)], [`u16`],
+  [Température (#sym.degree C)], [Fixed point: 16 bits (7 bits de décimales)],
+  [Pression interne (barg)], [Fixed point: 14 bits (8 bits de décimales)],
+  [Efficacité (%)], [`u8` (255 = 100%, 0 = 0%],
+
+  table.cell([Outboard 5.0#footnote[Ces données proviendront sûrement du _charge controller_, mais
+  tout ça reste à voir]], rowspan: 3),
+  [Courant (A)], [Fixed point: 16 bits (7 bits de décimales)],
+  [Tension (V)], [Fixed point: 16 bits (8 bits de décimales)],
+  [Puissance (W)], [Fixed point: 16 bits (2 bits de décimales)],
+
+  [#link("https://www.swagelok.com/downloads/webcatalogs/fr/ms-02-225.pdf")[PTI-S-AG4-21\?\?-\?]#footnote[La valeur des capteurs de pressions est lu par l'ADC des STM32.]], [Pression (barg)], [Fixed point: 12 bits (10 bits de décimales)],
+  [#link("https://www.swagelok.com/downloads/webcatalogs/fr/ms-02-225.pdf")[PTI-S-AG400-21BG-\?]], [Pression (barg)], [Fixed point: 12 bits (3 bits de décimales)],
+
+  [_Actuateur de valve_], [État (`enum` + `bool`)], [
+  Une de ces valeurs:
+  - `OPEN`
+  - `CLOSED`
+  - `UNKNOWN`
+
+  Ainsi qu'un `bool` (`true` = bon état, `false` = mauvais état).
+  ],
+
+  table.cell([_État du bateau_]), [État (`enum`)], [
+    Une de ces valeurs:
+    - `IDLE`
+    - `STARTING`
+    - `STARTED`
+    - `SHUTTING DOWN`
+  ],
+
+  table.cell([_Switch électronique_]), [État], [`bool` (`true` = ouverte, `false` = fermée)],
+
+  table.cell([_Connexion LTE_]), [État], [`bool` (`true` = connecté, `false` = pas de connexion)],
+
+  table.cell([_Ventilateur_]), [Vitesse de rotation], [`u8` (255 = vitesse max., 0 = à l'arrêt)],
+
+  table.cell([_Détecteur d'isolation_]), [État de l'isolation], [`bool` (`true` = ok, `false` = défaut d'isolation)],
+
+  table.cell([_Charge controller_]), [_À déterminer_], [_à déterminer_],
+)
+
+== Capteurs sur chaque module
+
+#table(columns: 3,
+  table.header([Module], [Capteurs/données disponibles], [Description (quantité)]),
+
+  [PCB01 - Cockpit], [_État du bateau_], [État actuel du bateau (1)],
+
+  table.cell(rowspan: 4)[PCB02 - Plaque hydrogène],
+  [DS18B20], [
+    - Température de la plaque
+    - À déterminer
+    - À déterminer
+
+    (3 au total)
+  ],
+  [PTI-S-AG4-21\?\?-\?], [Basse pression (1)],
+  [PTI-S-AG400-21BG-\?], [Haute pression (1)],
+  [_Actuateurs de valve_], [
+    - Haute pression
+    - Basse pression
+    - À déterminer
+
+    (3 au total)
+  ],
+
+  table.cell(rowspan: 3)[PCB03 - Batterie de télémétrie],
+  [LTC2944], [Informations sur la batterie (1)],
+  [DS18B20], [Température de la batterie (1)],
+  [_Switch électronique_], [État de l'alimentation 24V (1)],
+
+  table.cell(rowspan: 6)[PCB04 - Contrôle de la puissance],
+  [DS18B20], [
+    - Température de la batterie
+    - Température pile à combustible A
+    - Température pile à combustible B
+
+    (3 au total)
+  ],
+  [LTC2944], [Informations sur la batterie auxiliaire (1)],
+  [Protium 2500], [
+    - Informations pile à combustible A
+    - Informations pile à combustible B
+
+    (2 au total)
+  ],
+  [Outboard 5.0], [Informations sur le moteur (1)],
+  [_Switches électroniques_], [
+    - BOP
+    - Sortie pile à combustible A
+    - Sortie pile à combustible B
+    - Résistance de freinage
+    - Alimentation du moteur
+
+    (5 au total)
+  ],
+  [_Charge controller_], [À déterminer (1)],
+
+  table.cell(rowspan: 2)[PCB05 - Capteurs],
+  [GP1818MK], [Données GPS (1)],
+  [BNO055], [Orientation et accélération (1)],
+
+  table.cell(rowspan: 2)[PCB06 - Système de refroidissement],
+  [_Capteur de température ambiante_], [Température ambiante du boîtier (à déterminer)],
+  [_Ventilateur_], [Vitesse du ou des ventilateur(s) (à déterminer)],
+
+  table.cell(rowspan: 1)[PCB07 - Contrôle d'isolation électrique#footnote[Pourrait être combiné avec
+  le PCB04.]],
+  [_Détecteur d'isolation_], [
+    - Isolation pile à combustible A
+    - Isolation pile à combustible B
+
+    (2 au total)
+  ],
+
+  table.cell(rowspan: 1)[HAT01 - Dashboard du pilote],
+  [_aucune donnée_], [N/A],
+
+  table.cell(rowspan: 1)[HAT02 - Télémétrie LTE],
+  [_Connexion LTE_], [État de la connexion (1)],
+)
