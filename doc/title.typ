@@ -30,6 +30,6 @@
 
   #par(justify: false)[
     *Résumé* \
-    Ce document décrit comment les trames CAN circulant dans le réseau du bateau seront formées. Un module Rust sera créé pour manipuler facilement ces trames. Ce dernier permettra de construire une trame CAN (#link("https://docs.embassy.dev/embassy-stm32/git/stm32g474rb/can/frame/struct.Frame.html")[`can::Frame`]) en utilisant un patron _builder_. 
+    Ce document décrit comment les trames CAN circulant dans le réseau du bateau seront formées. Un module Rust sera créé pour manipuler facilement ces trames. Ce dernier permettra de construire une trame CAN (#link("https://docs.embassy.dev/embassy-stm32/git/stm32g474rb/can/frame/struct.Frame.html")[`can::Frame`]). 
   ]
 ]

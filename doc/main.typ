@@ -30,22 +30,24 @@ Les adresses sont présentées dans le tableau suivant:
 #figure(table(
   columns: 2,
   align: (center + horizon, center + horizon),
-  table.header([*Module \ (bits 3 à 0)*],[*Nom du module*#footnote[Voir #link("https://github.com/Exocet-Polytechnique/exo-pcbs/wiki/Requis-PCB")[Requis PCBs] sur GitHub]],),
-  [`0b1111`], [_Broadcast_],
-  [`0b0000`], [Cockpit (PCB 1)],
-  [`0b0001`], [Gestion hydrogène (PCB 2)],
-  [`0b0010`], [Basse puissance (PCB 3)],
-  [`0b0011`], [Haute puissance (PCB 4)],
-  [`0b0100`], [Télémétrie Écran (HAT 01)],
-  [`0b0101`], [Télémétrie LTE (HAT 02)]
+  table.header([*Module \ (bits 4 à 0)*],[*Nom du module*#footnote[Voir #link("https://github.com/Exocet-Polytechnique/exo-pcbs/wiki/Requis-PCB")[Requis PCBs] sur GitHub]],),
+  [`0b11111`], [_Broadcast_],
+  [`0b00000`], [Cockpit (PCB 1)],
+  [`0b00001`], [Gestion hydrogène (PCB 2)],
+  [`0b00010`], [Haute puissance (PCB 4)],
+  [`0b00011`], [Capteurs (PCB 5)],
+  [`0b00100`], [Contrôle système de refroidissement (PCB 6)],
+  [`0b00101`], [Contrôle isolation (PCB 7)],
+  [`0b00110`], [Interface du pilote (HAT01)],
+  [`0b00111`], [Télémétrie LTE (HAT02)],
 ))
 
-Ces valeurs sont susceptibles de changer au fur et à mesure. Un fichier de configuration (lien à venir) contiendra les définitions nécessaires donc il ne sera jamais nécessaire de manipuler directement ces valeurs. Une valeur de module égale à 15 est aussi réservée pour tout type de _broadcast_.
+Ces valeurs sont susceptibles de changer au fur et à mesure. Un fichier de configuration (lien à venir) contiendra les définitions nécessaires donc il ne sera jamais nécessaire de manipuler directement ces valeurs. Une valeur de module égale à 31 est aussi réservée pour tout type de _broadcast_.
 
 L'adressage des sous-modules (senseurs, capteurs situés sur un même PCB) seront définis dans les champs de données des trames.
 
 == Types de trames
-Il y aura principalement 3 types de trames: des trames d'instructions, des trames de données et des trames d'erreurs. Une série de 2 bits sera utilisée pour définir ce type dans l'identifiant. 
+Il y aura principalement 3 types de trames: des trames de procédures, des trames de données et des trames d'erreurs. Une série de 2 bits sera utilisée pour définir ce type dans l'identifiant. 
 
 Les valeurs associées à chaque type :
 
@@ -70,17 +72,17 @@ Finalement, les bits restants sont mis à 1 (#highlight[et pourront être chang�
 #bytefield(
   bpr: 11,
   msb: left,
-  bitheader(10,9,6,5,4,3,0), 
+  bitheader(10,9,5,4,3,2,0), 
   bits(1)[Priorité],
-  bits(4)[#align(center)[
+  bits(5)[#align(center)[
     Module expéditeur\ 
-    #text(size: 8pt)[(bits 9 à 6 de l'adresse)]
+    #text(size: 8pt)[(bits 9 à 5 de l'adresse)]
   ]],
   bits(2)[#align(center)[
     Type de trame\ 
-    #text(size: 8pt)[(bits 5 et 4 de l'adresse)]
+    #text(size: 8pt)[(bits 4 et 3 de l'adresse)]
   ]],
-  bits(4)[0b1111],
+  bits(3)[0b111],
 )
 #linebreak()
 
