@@ -1,274 +1,143 @@
 VERSION ""
-
-
-NS_ : 
-		NS_DESC_
+NS_: NS_DESC_
 		CM_
-		BA_DEF_
 		BA_
 		VAL_
 		CAT_DEF_
 		CAT_
 		FILTER
-		BA_DEF_DEF_
 		EV_DATA_
 		ENVVAR_DATA_
 		SGTYPE_
 		SGTYPE_VAL_
-		BA_DEF_SGTYPE_
 		BA_SGTYPE_
 		SIG_TYPE_REF_
-		VAL_TABLE_
 		SIG_GROUP_
 		SIG_VALTYPE_
 		SIGTYPE_VALTYPE_
 		BO_TX_BU_
-		BA_DEF_REL_
 		BA_REL_
-		BA_DEF_DEF_REL_
 		BU_SG_REL_
 		BU_EV_REL_
 		BU_BO_REL_
 		SG_MUL_VAL_
-
-BS_:
-
-BU_:
-
-
-BO_ 2031 NBD: 8 Broadcast
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" Broadcast
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" Broadcast
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" Broadcast
-
-BO_ 2015 NBI: 8 Broadcast
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" Broadcast
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" Broadcast
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" Broadcast
-
-BO_ 1007 PBD: 8 Broadcast
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" Broadcast
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" Broadcast
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" Broadcast
-
-BO_ 991 PBI: 8 Broadcast
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" Broadcast
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" Broadcast
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" Broadcast
-
-BO_ 1071 NCD: 8 CockpitECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" CockpitECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" CockpitECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" CockpitECU
-
-BO_ 1055 NCI: 8 CockpitECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" CockpitECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" CockpitECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" CockpitECU
-
-BO_ 47 PCD: 8 CockpitECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" CockpitECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" CockpitECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" CockpitECU
-
-BO_ 31 PCI: 8 CockpitECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" CockpitECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" CockpitECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" CockpitECU
-
-BO_ 1135 NHD: 8 HydrogenECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HydrogenECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HydrogenECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" HydrogenECU
-
-BO_ 1119 NHI: 8 HydrogenECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HydrogenECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HydrogenECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" HydrogenECU
-
-BO_ 111 PHD: 8 HydrogenECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HydrogenECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HydrogenECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" HydrogenECU
-
-BO_ 95 PHI: 8 HydrogenECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HydrogenECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HydrogenECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" HydrogenECU
-
-BO_ 1199 NLD: 8 LowPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" LowPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" LowPowerECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" LowPowerECU
-
-BO_ 1183 NLI: 8 LowPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" LowPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" LowPowerECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" LowPowerECU
-
-BO_ 175 PLD: 8 LowPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" LowPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" LowPowerECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" LowPowerECU
-
-BO_ 159 PLI: 8 LowPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" LowPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" LowPowerECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" LowPowerECU
-
-BO_ 1263 NXD: 8 HighPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HighPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HighPowerECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" HighPowerECU
-
-BO_ 1247 NXI: 8 HighPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HighPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HighPowerECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" HighPowerECU
-
-BO_ 239 PXD: 8 HighPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HighPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HighPowerECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" HighPowerECU
-
-BO_ 223 PXI: 8 HighPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HighPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HighPowerECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" HighPowerECU
-
-BO_ 1327 NTD: 8 TelemetryECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" TelemetryECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" TelemetryECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" TelemetryECU
-
-BO_ 1311 NTI: 8 TelemetryECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" TelemetryECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" TelemetryECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" TelemetryECU
-
-BO_ 303 PTD: 8 TelemetryECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" TelemetryECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" TelemetryECU
-	SG_ Data : 8|48@1+ (0,0) [0|0] "" TelemetryECU
-
-BO_ 287 PTI: 8 TelemetryECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" TelemetryECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" TelemetryECU
-	SG_ Instruction : 8|48@1+ (0,0) [0|0] "" TelemetryECU
-
-BO_ 1999 NBE: 8 Broadcast
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" Broadcast
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" Broadcast
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" Broadcast
-	
-
-BO_ 975 PBE: 8 Broadcast
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" Broadcast
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" Broadcast
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" Broadcast
-
-BO_ 1039 NCE: 8 CockpitECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" CockpitECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" CockpitECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" CockpitECU
-
-BO_ 15 PCE: 8 CockpitECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" CockpitECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" CockpitECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" CockpitECU
-
-BO_ 1103 NHE: 8 HydrogenECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HydrogenECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HydrogenECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" HydrogenECU
-
-BO_ 79 PHE: 8 HydrogenECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HydrogenECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HydrogenECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" HydrogenECU
-
-BO_ 1167 NLE: 8 LowPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" LowPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" LowPowerECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" LowPowerECU
-
-BO_ 143 PLE: 8 LowPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" LowPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" LowPowerECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" LowPowerECU
-
-BO_ 1231 NXE: 8 HighPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HighPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HighPowerECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" HighPowerECU
-
-BO_ 207 PXE: 8 HighPowerECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" HighPowerECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" HighPowerECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" HighPowerECU
-
-BO_ 1295 NTE: 8 TelemetryECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" TelemetryECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" TelemetryECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" TelemetryECU
-
-BO_ 271 PTE: 8 TelemetryECU
-	SG_ Receiver : 0|4@1+ (0,0) [0|15] "" TelemetryECU
-	SG_ Reserved : 4|4@1+ (0,0) [0|0] "" TelemetryECU
-	SG_ Error : 8|48@1+ (0,0) [0|0] "" TelemetryECU
-
-
-CM_ BO_ 2031 "Low Priority, Broadcast, Data";
-CM_ BO_ 2015 "Low Priority, Broadcast, Data";
-CM_ BO_ 31 "High Priority, Cockpit, Instruction";
-CM_ BO_ 47 "High Priority, Cockpit, Data";
-CM_ BO_ 95 "High Priority, Hydrogen, Instruction";
-CM_ BO_ 111 "High Priority, Hydrogen, Data";
-CM_ BO_ 159 "High Priority, Low Power, Instruction";
-CM_ BO_ 175 "High Priority, Low Power, Data";
-CM_ BO_ 223 "High Priority, High Power, Instruction";
-CM_ BO_ 239 "High Priority, High Power, Data";
-CM_ BO_ 287 "High Priority, Telemetry, Instruction";
-CM_ BO_ 303 "High Priority, Telemetry, Data";
-CM_ BO_ 991 "High Priority, Broadcast, Instruction";
-CM_ BO_ 1007 "High Priority, Broadcast, Data";
-CM_ BO_ 1055 "Low Priority, Cockpit, Instruction";
+BS_: BU_: BO_ 1071 LP_Cockpit_Data: 8 Vector__XXX
+ SG_ BoatState: 0|8@1+ (1,0) [0|3] "" Vector__XXX
+BO_ 15 HP_Cockpit_Error: 8 Vector__XXX
+ SG_ ErrorCode: 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ErrorData: 16|40@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1135 LP_Hydrogen_Data: 8 Vector__XXX
+ SG_ SentData M: 0|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ Temperature0 m0M: 8|16@1- (0.01,0) [-40|125] "degC" Vector__XXX
+ SG_ Temperature1 m0M: 24|16@1- (0.01,0) [-40|125] "degC" Vector__XXX
+ SG_ Temperature2 m0M: 40|16@1- (0.01,0) [-40|125] "degC" Vector__XXX
+ SG_ PressureLow m1M: 8|16@1+ (0.01,0) [0|655.35] "bar" Vector__XXX
+ SG_ PressureHigh m1: 24|16@1+ (0.1,0) [0|6553.5] "bar" Vector__XXX
+ SG_ ActuatorHighPressure m2: 8|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ ActuatorLowPressure m2: 16|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ ActuatorOther m2: 24|8@1+ (1,0) [0|2] "" Vector__XXX
+BO_ 79 HP_Hydrogen_Error: 8 Vector__XXX
+ SG_ ErrorCode: 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ErrorData: 16|40@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1199 LP_LowPower_Data: 8 Vector__XXX
+ SG_ SentData M: 0|8@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ BatteryStateOfCharge m0: 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BatteryCurrent m0: 16|16@1- (0.001953125,0) [-64|64] "A" Vector__XXX
+ SG_ BatteryVoltage m0: 32|16@1+ (0.001953125,0) [0|64] "V" Vector__XXX
+ SG_ BatteryTemperature m1: 8|16@1- (0.0625,0) [-40|125] "degC" Vector__XXX
+ SG_ Power24VSwitch m2: 8|8@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 143 HP_LowPower_Error: 8 Vector__XXX
+ SG_ ErrorCode: 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ErrorData: 16|40@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1263 LP_HighPower_Data: 8 Vector__XXX
+ SG_ SentData M: 0|8@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TemperatureBattery m0: 8|16@1- (0.0625,0) [-40|125] "degC" Vector__XXX
+ SG_ TemperatureFuelCellA m0: 24|16@1- (0.0625,0) [-40|125] "degC" Vector__XXX
+ SG_ TemperatureFuelCellB m0: 40|16@1- (0.0625,0) [-40|125] "degC" Vector__XXX
+ SG_ AuxBatteryStateOfCharge m1: 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ AuxBatteryCurrent m1: 16|16@1- (0.001953125,0) [-64|64] "A" Vector__XXX
+ SG_ AuxBatteryVoltage m1: 32|16@1+ (0.001953125,0) [0|64] "V" Vector__XXX
+ SG_ FuelCellAPower m2: 8|16@1+ (0.0625,0) [0|8191.9375] "W" Vector__XXX
+ SG_ FuelCellAVoltage m2: 24|16@1+ (0.0078125,0) [0|511.9921875] "V" Vector__XXX
+ SG_ FuelCellACurrent m2: 40|16@1- (0.0078125,0) [-511.9921875|511.9921875] "A" Vector__XXX
+ SG_ FuelCellAEnergy m3: 8|16@1+ (1,0) [0|65535] "Wh" Vector__XXX
+ SG_ FuelCellATemperature m3: 24|16@1- (0.0078125,0) [-409.6|409.59375] "degC" Vector__XXX
+ SG_ FuelCellAPressure m3: 40|16@1+ (0.00390625,0) [0|255.99609375] "bar" Vector__XXX
+ SG_ FuelCellAEfficiency m3: 56|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ FuelCellBPower m4: 8|16@1+ (0.0625,0) [0|8191.9375] "W" Vector__XXX
+ SG_ FuelCellBVoltage m4: 24|16@1+ (0.0078125,0) [0|511.9921875] "V" Vector__XXX
+ SG_ FuelCellBCurrent m4: 40|16@1- (0.0078125,0) [-511.9921875|511.9921875] "A" Vector__XXX
+ SG_ FuelCellBEnergy m5: 8|16@1+ (1,0) [0|65535] "Wh" Vector__XXX
+ SG_ FuelCellBTemperature m5: 24|16@1- (0.0078125,0) [-409.6|409.59375] "degC" Vector__XXX
+ SG_ FuelCellBPressure m5: 40|16@1+ (0.00390625,0) [0|255.99609375] "bar" Vector__XXX
+ SG_ FuelCellBEfficiency m5: 56|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ OutboardCurrent m6: 8|16@1- (0.0078125,0) [-511.9921875|511.9921875] "A" Vector__XXX
+ SG_ OutboardVoltage m6: 24|16@1+ (0.00390625,0) [0|255.99609375] "V" Vector__XXX
+ SG_ OutboardPower m6: 40|16@1+ (0.25,0) [0|16383.75] "W" Vector__XXX
+ SG_ BOPSwitch m7: 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FuelCellASwitch m7: 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FuelCellBSwitch m7: 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BrakeResistorSwitch m7: 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MotorPowerSwitch m7: 40|8@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 207 HP_HighPower_Error: 8 Vector__XXX
+ SG_ ErrorCode: 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ErrorData: 16|40@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1327 LP_Telemetry_Data: 8 Vector__XXX
+ SG_ SentData M: 0|8@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ Latitude m0: 8|32@1- (0.000030517578125,0) [-90|90] "deg" Vector__XXX
+ SG_ Longitude m1: 8|32@1- (0.000030517578125,0) [-180|180] "deg" Vector__XXX
+ SG_ Speed m2: 8|16@1+ (0.0009765625,0) [0|250] "km/h" Vector__XXX
+ SG_ AccelerationX m3: 8|16@1- (0.001953125,0) [-32|32] "m/s2" Vector__XXX
+ SG_ AccelerationY m3: 24|16@1- (0.001953125,0) [-32|32] "m/s2" Vector__XXX
+ SG_ AccelerationZ m3: 40|16@1- (0.001953125,0) [-32|32] "m/s2" Vector__XXX
+ SG_ Heading m4: 8|16@1+ (0.03125,0) [0|360] "deg" Vector__XXX
+ SG_ Roll m4: 24|16@1- (0.03125,0) [-180|180] "deg" Vector__XXX
+ SG_ Pitch m4: 40|16@1- (0.03125,0) [-180|180] "deg" Vector__XXX
+BO_ 271 HP_Telemetry_Error: 8 Vector__XXX
+ SG_ ErrorCode: 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ ErrorData: 16|40@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1391 LP_LTE_Data: 8 Vector__XXX
+ SG_ LTEConnected: 0|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 1455 LP_Cooling_Data: 8 Vector__XXX
+ SG_ AmbientTemperature: 0|20@1- (0.000244140625,0) [-128|127.999755859375] "degC" Vector__XXX
+ SG_ FanSpeed: 20|8@1+ (1,0) [0|255] "" Vector__XXX
+BO_ 1519 LP_Isolation_Data: 8 Vector__XXX
+ SG_ IsolationFuelCellA: 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IsolationFuelCellB: 1|1@1+ (1,0) [0|1] "" Vector__XXX
 CM_ BO_ 1071 "Low Priority, Cockpit, Data";
-CM_ BO_ 1119 "Low Priority, Hydrogen, Instruction";
-CM_ BO_ 1135 "Low Priority, Hydrogen, Data";
-CM_ BO_ 1183 "Low Priority, Low Power, Instruction";
-CM_ BO_ 1199 "Low Priority, Low Power, Data";
-CM_ BO_ 1247 "Low Priority, High Power, Instruction";
-CM_ BO_ 1263 "Low Priority, High Power, Data";
-CM_ BO_ 1311 "Low Priority, Telemetry, Instruction";
-CM_ BO_ 1327 "Low Priority, Telemetry, Data";
-CM_ BO_ 1999 "Low Priority, Broadcast, Error";
-CM_ BO_ 975 "High Priority, Broadcast, Error";
-CM_ BO_ 1039 "Low Priority, Cockpit, Error";
 CM_ BO_ 15 "High Priority, Cockpit, Error";
-CM_ BO_ 1103 "Low Priority, Hydrogen, Error";
+CM_ BO_ 1135 "Low Priority, Hydrogen, Data";
 CM_ BO_ 79 "High Priority, Hydrogen, Error";
-CM_ BO_ 1167 "Low Priority, Low Power, Error";
+CM_ BO_ 1199 "Low Priority, Low Power, Data";
 CM_ BO_ 143 "High Priority, Low Power, Error";
-CM_ BO_ 1231 "Low Priority, High Power, Error";
+CM_ BO_ 1263 "Low Priority, High Power, Data";
 CM_ BO_ 207 "High Priority, High Power, Error";
-CM_ BO_ 1295 "Low Priority, Telemetry, Error";
+CM_ BO_ 1327 "Low Priority, Telemetry, Data";
 CM_ BO_ 271 "High Priority, Telemetry, Error";
-BA_DEF_ SG_  "SPN" INT 0 524287;
-BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
-BA_DEF_  "DatabaseVersion" STRING ;
-BA_DEF_  "BusType" STRING ;
-BA_DEF_  "ProtocolType" STRING ;
-BA_DEF_  "DatabaseCompiler" STRING ;
-BA_DEF_DEF_  "SPN" 0;
-BA_DEF_DEF_  "VFrameFormat" "J1939PG";
-BA_DEF_DEF_  "DatabaseVersion" "DEMO PLUS";
-BA_DEF_DEF_  "BusType" "";
-BA_DEF_DEF_  "ProtocolType" "";
-BA_DEF_DEF_  "DatabaseCompiler" "";
-BA_ "ProtocolType" "J1939";
-BA_ "BusType" "CAN";
-BA_ "DatabaseCompiler" "CSS ELECTRONICS (WWW.CSSELECTRONICS.COM)";
-BA_ "DatabaseVersion" "1.0.0";
-BA_ "VFrameFormat" BO_ 2031 3;
-BA_ "VFrameFormat" BO_ 2015 3;
+CM_ BO_ 1071 "Low Priority, Cockpit, Data";
+CM_ BO_ 1391 "Low Priority, LTE, Data";
+CM_ BO_ 1455 "Low Priority, Cooling, Data";
+CM_ BO_ 1519 "Low Priority, Isolation, Data";
+CM_ SG_ 1071 BoatState "Boat state of the cockpit module";
+CM_ SG_ 1391 LTEConnected "LTE connection state";
+CM_ SG_ 1455 AmbientTemperature "Ambient temperature of the cooling enclosure";
+CM_ SG_ 1455 FanSpeed "Single fan speed, reused for every fan with the same format";
+CM_ SG_ 1519 IsolationFuelCellA "Isolation state for fuel cell A";
+CM_ SG_ 1519 IsolationFuelCellB "Isolation state for fuel cell B";
+VAL_ 1071 BoatState 0 "IDLE" 1 "STARTING" 2 "STARTED" 3 "SHUTTING DOWN";
+CM_ SG_ 1135 SentData "Data type multiplexer: 0=Temperature, 1=Pressure, 2=ActuatorState";
+CM_ SG_ 1135 Temperature0 "Hydrogen temperature sensor 0";
+CM_ SG_ 1135 Temperature1 "Hydrogen temperature sensor 1";
+CM_ SG_ 1135 Temperature2 "Hydrogen temperature sensor 2";
+CM_ SG_ 1135 PressureLow "Low-pressure line (feed side)";
+CM_ SG_ 1135 PressureHigh "High-pressure line (storage side)";
+CM_ SG_ 1135 ActuatorHighPressure "High-pressure actuator/valve state";
+CM_ SG_ 1135 ActuatorLowPressure "Low-pressure actuator/valve state";
+CM_ SG_ 1135 ActuatorOther "Auxiliary actuator/valve state";
+CM_ SG_ 1263 SentData "Data type multiplexer: 0=Temperature";
+CM_ SG_ 1263 TemperatureBattery "Battery pack temperature";
+CM_ SG_ 1263 TemperatureFuelCellA "Fuel cell stack A temperature";
+CM_ SG_ 1263 TemperatureFuelCellB "Fuel cell stack B temperature";
+VAL_ 1135 ActuatorHighPressure 0 "UNKNOWN" 1 "ON" 2 "OFF";
+VAL_ 1135 ActuatorLowPressure 0 "UNKNOWN" 1 "ON" 2 "OFF";
+VAL_ 1135 ActuatorOther 0 "UNKNOWN" 1 "ON" 2 "OFF";
