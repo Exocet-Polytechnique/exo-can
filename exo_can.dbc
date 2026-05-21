@@ -1,412 +1,346 @@
-VERSION ""
+VERSION "0.1"
 
-
-NS_ : 
-		NS_DESC_
-		CM_
-		BA_DEF_
-		BA_
-		VAL_
-		CAT_DEF_
-		CAT_
-		FILTER
-		BA_DEF_DEF_
-		EV_DATA_
-		ENVVAR_DATA_
-		SGTYPE_
-		SGTYPE_VAL_
-		BA_DEF_SGTYPE_
-		BA_SGTYPE_
-		SIG_TYPE_REF_
-		VAL_TABLE_
-		SIG_GROUP_
-		SIG_VALTYPE_
-		SIGTYPE_VALTYPE_
-		BO_TX_BU_
-		BA_DEF_REL_
-		BA_REL_
-		BA_DEF_DEF_REL_
-		BU_SG_REL_
-		BU_EV_REL_
-		BU_BO_REL_
-		SG_MUL_VAL_
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
 
 BS_:
 
 BU_: Broadcast CockpitECU HydrogenECU HighPowerECU SensorsECU CoolingECU IsolationECU DriverInterfaceHAT TelemetryLTEHAT
 
-BO_ 999 P0E: 8 Broadcast
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 999 frame_P0E: 8 Broadcast
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1007 P0I: 8 Broadcast
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1007 frame_P0I: 8 Broadcast
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1015 P0D: 8 Broadcast
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1015 frame_P0D: 8 Broadcast
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 2023 N0E: 8 Broadcast
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 2023 frame_N0E: 8 Broadcast
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 2031 N0I: 8 Broadcast
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 2031 frame_N0I: 8 Broadcast
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 2039 N0D: 8 Broadcast
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 2039 frame_N0D: 8 Broadcast
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 7 P1E: 8 CockpitECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 7 frame_P1E: 8 CockpitECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 15 P1I: 8 CockpitECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 15 frame_P1I: 8 CockpitECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 23 P1D: 8 CockpitECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 23 frame_P1D: 8 CockpitECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1031 N1E: 8 CockpitECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1031 frame_N1E: 8 CockpitECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1039 N1I: 8 CockpitECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1039 frame_N1I: 8 CockpitECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1047 N1D: 8 CockpitECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1047 frame_N1D: 8 CockpitECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 39 P2E: 8 HydrogenECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 39 frame_P2E: 8 HydrogenECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 47 P2I: 8 HydrogenECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 47 frame_P2I: 8 HydrogenECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 55 P2D: 8 HydrogenECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 55 frame_P2D: 8 HydrogenECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1063 N2E: 8 HydrogenECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1063 frame_N2E: 8 HydrogenECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1071 N2I: 8 HydrogenECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1071 frame_N2I: 8 HydrogenECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1079 N2D: 8 HydrogenECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1079 frame_N2D: 8 HydrogenECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 71 P3E: 8 HighPowerECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 71 frame_P3E: 8 HighPowerECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 79 P3I: 8 HighPowerECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 79 frame_P3I: 8 HighPowerECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 87 P3D: 8 HighPowerECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 87 frame_P3D: 8 HighPowerECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1095 N3E: 8 HighPowerECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1095 frame_N3E: 8 HighPowerECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1103 N3I: 8 HighPowerECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1103 frame_N3I: 8 HighPowerECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1111 N3D: 8 HighPowerECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1111 frame_N3D: 8 HighPowerECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 103 P4E: 8 SensorsECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 103 frame_P4E: 8 SensorsECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 111 P4I: 8 SensorsECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 111 frame_P4I: 8 SensorsECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 119 P4D: 8 SensorsECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 119 frame_P4D: 8 SensorsECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1127 N4E: 8 SensorsECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1127 frame_N4E: 8 SensorsECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1135 N4I: 8 SensorsECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1135 frame_N4I: 8 SensorsECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1143 N4D: 8 SensorsECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1143 frame_N4D: 8 SensorsECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 135 P5E: 8 CoolingECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 135 frame_P5E: 8 CoolingECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 143 P5I: 8 CoolingECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 143 frame_P5I: 8 CoolingECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 151 P5D: 8 CoolingECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 151 frame_P5D: 8 CoolingECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1159 N5E: 8 CoolingECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1159 frame_N5E: 8 CoolingECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1167 N5I: 8 CoolingECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1167 frame_N5I: 8 CoolingECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1175 N5D: 8 CoolingECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1175 frame_N5D: 8 CoolingECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 167 P6E: 8 IsolationECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 167 frame_P6E: 8 IsolationECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 175 P6I: 8 IsolationECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 175 frame_P6I: 8 IsolationECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 183 P6D: 8 IsolationECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 183 frame_P6D: 8 IsolationECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1191 N6E: 8 IsolationECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1191 frame_N6E: 8 IsolationECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1199 N6I: 8 IsolationECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1199 frame_N6I: 8 IsolationECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1207 N6D: 8 IsolationECU
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1207 frame_N6D: 8 IsolationECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 199 P7E: 8 DriverInterfaceHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 199 frame_P7E: 8 DriverInterfaceHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 207 P7I: 8 DriverInterfaceHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 207 frame_P7I: 8 DriverInterfaceHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 215 P7D: 8 DriverInterfaceHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 215 frame_P7D: 8 DriverInterfaceHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1223 N7E: 8 DriverInterfaceHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1223 frame_N7E: 8 DriverInterfaceHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1231 N7I: 8 DriverInterfaceHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1231 frame_N7I: 8 DriverInterfaceHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1239 N7D: 8 DriverInterfaceHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1239 frame_N7D: 8 DriverInterfaceHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 231 P8E: 8 TelemetryLTEHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 231 frame_P8E: 8 TelemetryLTEHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 239 P8I: 8 TelemetryLTEHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 239 frame_P8I: 8 TelemetryLTEHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 247 P8D: 8 TelemetryLTEHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 247 frame_P8D: 8 TelemetryLTEHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1255 N8E: 8 TelemetryLTEHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1255 frame_N8E: 8 TelemetryLTEHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ ErrorData : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1263 N8I: 8 TelemetryLTEHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1263 frame_N8I: 8 TelemetryLTEHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1271 N8D: 8 TelemetryLTEHAT
-	 SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	 SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1271 frame_N8D: 8 TelemetryLTEHAT
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
 
-CM_ BO_ 999 "Priority, Broadcast, Error";
-CM_ BO_ 1007 "Priority, Broadcast, Instruction";
-CM_ BO_ 1015 "Priority, Broadcast, Data";
-CM_ BO_ 2023 "Non-Priority, Broadcast, Error";
-CM_ BO_ 2031 "Non-Priority, Broadcast, Instruction";
-CM_ BO_ 2039 "Non-Priority, Broadcast, Data";
-CM_ BO_ 7 "Priority, CockpitECU, Error";
-CM_ BO_ 15 "Priority, CockpitECU, Instruction";
-CM_ BO_ 23 "Priority, CockpitECU, Data";
-CM_ BO_ 1031 "Non-Priority, CockpitECU, Error";
-CM_ BO_ 1039 "Non-Priority, CockpitECU, Instruction";
-CM_ BO_ 1047 "Non-Priority, CockpitECU, Data";
-CM_ BO_ 39 "Priority, HydrogenECU, Error";
-CM_ BO_ 47 "Priority, HydrogenECU, Instruction";
-CM_ BO_ 55 "Priority, HydrogenECU, Data";
-CM_ BO_ 1063 "Non-Priority, HydrogenECU, Error";
-CM_ BO_ 1071 "Non-Priority, HydrogenECU, Instruction";
-CM_ BO_ 1079 "Non-Priority, HydrogenECU, Data";
-CM_ BO_ 71 "Priority, HighPowerECU, Error";
-CM_ BO_ 79 "Priority, HighPowerECU, Instruction";
-CM_ BO_ 87 "Priority, HighPowerECU, Data";
-CM_ BO_ 1095 "Non-Priority, HighPowerECU, Error";
-CM_ BO_ 1103 "Non-Priority, HighPowerECU, Instruction";
-CM_ BO_ 1111 "Non-Priority, HighPowerECU, Data";
-CM_ BO_ 103 "Priority, SensorsECU, Error";
-CM_ BO_ 111 "Priority, SensorsECU, Instruction";
-CM_ BO_ 119 "Priority, SensorsECU, Data";
-CM_ BO_ 1127 "Non-Priority, SensorsECU, Error";
-CM_ BO_ 1135 "Non-Priority, SensorsECU, Instruction";
-CM_ BO_ 1143 "Non-Priority, SensorsECU, Data";
-CM_ BO_ 135 "Priority, CoolingECU, Error";
-CM_ BO_ 143 "Priority, CoolingECU, Instruction";
-CM_ BO_ 151 "Priority, CoolingECU, Data";
-CM_ BO_ 1159 "Non-Priority, CoolingECU, Error";
-CM_ BO_ 1167 "Non-Priority, CoolingECU, Instruction";
-CM_ BO_ 1175 "Non-Priority, CoolingECU, Data";
-CM_ BO_ 167 "Priority, IsolationECU, Error";
-CM_ BO_ 175 "Priority, IsolationECU, Instruction";
-CM_ BO_ 183 "Priority, IsolationECU, Data";
-CM_ BO_ 1191 "Non-Priority, IsolationECU, Error";
-CM_ BO_ 1199 "Non-Priority, IsolationECU, Instruction";
-CM_ BO_ 1207 "Non-Priority, IsolationECU, Data";
-CM_ BO_ 199 "Priority, DriverInterfaceHAT, Error";
-CM_ BO_ 207 "Priority, DriverInterfaceHAT, Instruction";
-CM_ BO_ 215 "Priority, DriverInterfaceHAT, Data";
-CM_ BO_ 1223 "Non-Priority, DriverInterfaceHAT, Error";
-CM_ BO_ 1231 "Non-Priority, DriverInterfaceHAT, Instruction";
-CM_ BO_ 1239 "Non-Priority, DriverInterfaceHAT, Data";
-CM_ BO_ 231 "Priority, TelemetryLTEHAT, Error";
-CM_ BO_ 239 "Priority, TelemetryLTEHAT, Instruction";
-CM_ BO_ 247 "Priority, TelemetryLTEHAT, Data";
-CM_ BO_ 1255 "Non-Priority, TelemetryLTEHAT, Error";
-CM_ BO_ 1263 "Non-Priority, TelemetryLTEHAT, Instruction";
-CM_ BO_ 1271 "Non-Priority, TelemetryLTEHAT, Data";
-
-BA_DEF_ SG_  "SPN" INT 0 524287;
-BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
-BA_DEF_  "DatabaseVersion" STRING ;
-BA_DEF_  "BusType" STRING ;
-BA_DEF_  "ProtocolType" STRING ;
-BA_DEF_  "DatabaseCompiler" STRING ;
-BA_DEF_DEF_  "SPN" 0;
-BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
-BA_DEF_DEF_  "DatabaseVersion" "2.0.0";
-BA_DEF_DEF_  "BusType" "";
-BA_DEF_DEF_  "ProtocolType" "";
-BA_DEF_DEF_  "DatabaseCompiler" "";
-BA_ "BusType" "CAN";
-BA_ "DatabaseVersion" "2.0.0";
+BO_ 250 Nci: 8 CockpitECU
+	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Instruction : 8|32@1+ (1,0) [0|0] "" Vector__XXX
