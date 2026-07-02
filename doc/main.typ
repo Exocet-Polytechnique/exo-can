@@ -184,18 +184,60 @@ La structure des 8 octets de la trame de procédure contiendra:
 Les données dépassant certains seuils seront envoyés dans un trame avec une
 priorité plus élevée et nécessiteront parfois une réponse du module du cockpit. //(À voir si c'est nécessaire?)
 
-#highlight()[(À DÉFINIR: Types de données à envoyer)]
-
-La structure des 8 octets de la trame de donnée contiendra:
+La structure des 8 octets de la trame de donnée contiendra (l'octet 0 est commun à toutes les trames, voir plus haut):
 
 #bytefield(
   bpr: 8,
   msb: right,
-  bitheader(0,1,7), 
-  bits(1)[Réservé],
-  bits(1)[Type de donnée],
-  bits(6)[Donnée]
+  bitheader(0,7),
+  bits(8)[Type de donnée (`DataType`)],
+  bits(32)[Donnée (`Data`) — f32 ou u32],
+  bits(16)[Non utilisé],
 )
+
+#linebreak()
+
+Le champ `DataType` (octet 1) identifie la mesure transportée. Le champ `Data` (octets 2--5) contient la valeur encodée en IEEE 754 `f32` pour les mesures continues, ou en `u32` pour les états discrets. L'interprétation est effectuée localement par chaque ECU.
+
+=== Codes DataType
+
+#figure(table(
+  columns: (auto, auto, auto, auto),
+  align: (center, left, center, center),
+  table.header([*Code*], [*Nom*], [*Unité*], [*Format*]),
+  [`0x01`], [`Voltage`],             [V],     [`f32`],
+  [`0x02`], [`Current`],             [A],     [`f32`],
+  [`0x03`], [`Power`],               [W],     [`f32`],
+  [`0x04`], [`Energy`],              [Wh],    [`f32`],
+  [`0x05`], [`BatteryCharge`],       [\%],    [`f32`],
+  [`0x06`], [`Efficiency`],          [\%],    [`f32`],
+  [`0x21`], [`Temperature`],         [°C],    [`f32`],
+  [`0x22`], [`Pressure`],            [bar g], [`f32`],
+  [`0x31`], [`ActuatorState`],       [—],     [`u32` enum],
+  [`0x32`], [`BoatState`],           [—],     [`u32` enum],
+  [`0x33`], [`IsolationState`],      [—],     [`u32` bool],
+  [`0x34`], [`IsolationResistance`], [Ω],     [`f32`],
+))
+
+=== Valeurs des états discrets
+
+#figure(table(
+  columns: (auto, auto, auto),
+  align: (center, center, left),
+  table.header([*DataType*], [*Valeur*], [*État*]),
+  table.cell(rowspan: 3)[`0x31` \ `ActuatorState`],
+  [`0x00`], [`UNKNOWN`],
+  [`0x01`], [`OPEN`],
+  [`0x02`], [`CLOSED`],
+  table.cell(rowspan: 4)[`0x32` \ `BoatState`],
+  [`0x00`], [`IDLE`],
+  [`0x01`], [`STARTING`],
+  [`0x02`], [`STARTED`],
+  [`0x03`], [`SHUTTING_DOWN`],
+  table.cell(rowspan: 2)[`0x33` \ `IsolationState`],
+  [`0x00`], [`FALSE`],
+  [`0x01`], [`TRUE`],
+))
 
 == Trames d'erreurs
 
