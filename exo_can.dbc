@@ -238,7 +238,15 @@ BO_ 1175 frame_N5D: 8 TelemetryBatteryECU
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 250 Nci: 8 CockpitECU
-	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Instruction : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+VAL_ 1015 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 2039 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 23 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 1047 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 55 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 1079 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 87 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 1111 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 119 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 1143 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 151 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;
+VAL_ 1175 DataType 1 "Voltage" 2 "Current" 3 "Power" 4 "Energy" 5 "BatteryCharge" 6 "Efficiency" 33 "Temperature" 34 "Pressure" 49 "ActuatorState" 50 "BoatState" 51 "IsolationState" 52 "IsolationResistance" ;

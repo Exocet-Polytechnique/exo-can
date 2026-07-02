@@ -213,10 +213,10 @@ Le champ `DataType` (octet 1) identifie la mesure transportée. Le champ `Data` 
   [`0x06`], [`Efficiency`],          [\%],    [`f32`],
   [`0x21`], [`Temperature`],         [°C],    [`f32`],
   [`0x22`], [`Pressure`],            [bar g], [`f32`],
-  [`0x31`], [`ActuatorState`],       [—],     [`u32` enum],
-  [`0x32`], [`BoatState`],           [—],     [`u32` enum],
-  [`0x33`], [`IsolationState`],      [—],     [`u32` bool],
-  [`0x34`], [`IsolationResistance`], [Ω],     [`f32`],
+  [`0x31`], [`ActuatorState`],       [—],     [`f32` interprété comme un enum],
+  [`0x32`], [`BoatState`],           [—],     [`f32` interprété comme un enum],
+  [`0x33`], [`IsolationState`],      [—],     [`f32` interprété comme un booléen],
+  [`0x34`], [`IsolationResistance`], [Ω???],     [`f32`],
 ))
 
 === Valeurs des états discrets
