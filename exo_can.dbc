@@ -49,7 +49,7 @@ BO_ 1015 frame_P0D: 8 Broadcast
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2023 frame_N0E: 8 Broadcast
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -66,7 +66,7 @@ BO_ 2039 frame_N0D: 8 Broadcast
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 7 frame_P1E: 8 CockpitECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -83,7 +83,7 @@ BO_ 23 frame_P1D: 8 CockpitECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1031 frame_N1E: 8 CockpitECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -100,7 +100,7 @@ BO_ 1047 frame_N1D: 8 CockpitECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 39 frame_P2E: 8 HydrogenECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -117,7 +117,7 @@ BO_ 55 frame_P2D: 8 HydrogenECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1063 frame_N2E: 8 HydrogenECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -134,7 +134,7 @@ BO_ 1079 frame_N2D: 8 HydrogenECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 71 frame_P3E: 8 HighPowerECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -151,7 +151,7 @@ BO_ 87 frame_P3D: 8 HighPowerECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1095 frame_N3E: 8 HighPowerECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -168,7 +168,7 @@ BO_ 1111 frame_N3D: 8 HighPowerECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 103 frame_P4E: 8 DriverInterfaceHAT
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -185,7 +185,7 @@ BO_ 119 frame_P4D: 8 DriverInterfaceHAT
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1127 frame_N4E: 8 DriverInterfaceHAT
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -202,7 +202,7 @@ BO_ 1143 frame_N4D: 8 DriverInterfaceHAT
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 135 frame_P5E: 8 TelemetryBatteryECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -219,7 +219,7 @@ BO_ 151 frame_P5D: 8 TelemetryBatteryECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1159 frame_N5E: 8 TelemetryBatteryECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
@@ -236,7 +236,7 @@ BO_ 1175 frame_N5D: 8 TelemetryBatteryECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DestSubModule : 0|4@1+ (1,0) [0|0] "" Vector__XXX
 	SG_ DataType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
-	SG_ Data : 16|48@1+ (1,0) [0|0] "" Vector__XXX
+	SG_ Data : 16|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 250 Nci: 8 CockpitECU
 	SG_ DestModule : 4|4@1+ (1,0) [0|0] "" Vector__XXX
